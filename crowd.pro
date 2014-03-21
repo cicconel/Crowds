@@ -1,6 +1,12 @@
+#------------------------
+# QMake generator file
+#------------------------
+
+# General options
 TEMPLATE = app
 TARGET   = crowd_simulation
 CONFIG  += qt glut opengl thread openmp debug release 
+LIBS *= -lglut
 OBJECTS_DIR = build
 
 #Todo : option that might be useful?
@@ -8,6 +14,7 @@ OBJECTS_DIR = build
 #QT *= xml opengl 
 #Todo : using absolute path might be a great idea
 
+# Code Files
 HEADERS = src/agent.hpp \
           src/group.hpp \
           src/scene.hpp \
@@ -22,4 +29,9 @@ SOURCES = src/main.cpp \
           src/scene_display.cpp \
           src/map.cpp
 
-LIBS *= -lglut
+
+# Additionnal command to distclean target
+QMAKE_DISTCLEAN += rm -f *~; \
+    rm -r build/;            \
+    rm -f /src/*~;           \
+    rm -f /scenes/*~;        \
