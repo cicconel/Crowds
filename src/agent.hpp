@@ -23,7 +23,8 @@ public:
 	
 	
 	/*** Methods ***/
-    void draw();
+	// Draw an agent
+	void draw();
 	
 };
 

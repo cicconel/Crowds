@@ -26,7 +26,8 @@ public:
 	
 	
 	/*** Methods ***/
-    void draw();
+	// Draw a group
+	void draw();
 	
 };
 

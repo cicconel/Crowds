@@ -1,5 +1,6 @@
 #include "agent.hpp"
 #include <GL/glut.h>  
+
 /*** Constructors ***/
 
 Agent::Agent()
@@ -20,11 +21,9 @@ Agent::~Agent()
 
 /*** Methods ***/
 
-
-//Draw an agent
 void Agent::draw()
 {
-    //disk(position.x,position.y,bodyDiameter);
+	//disk(position.x, position.y, bodyDiameter);
 }
 
 
@@ -33,12 +32,13 @@ void Agent::draw()
 #define DISK_PRECISION 20
 void disk(float x, float y, float r)
 {
-    glBegin( GL_TRIANGLE_FAN );
-        glVertex2f(x, y);
-        for( int n = 0; n <= DISK_PRECISION; ++n ) {
-            float const t = 2*M_PI*(float)n/(float)DISK_PRECISION;
-            glVertex2f(x + sin(t)*r, y + cos(t)*r);
-        }
-    glEnd();
+	glBegin(GL_TRIANGLE_FAN);
+		glVertex2f(x, y);
+		for(int n = 0; n <= DISK_PRECISION; ++n)
+		{
+			float const t = 2*M_PI*(float)n/(float)DISK_PRECISION;
+			glVertex2f(x + sin(t)*r, y + cos(t)*r);
+		}
+	glEnd();
 }
 

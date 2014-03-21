@@ -24,15 +24,14 @@ Group::~Group()
 
 /*** Methods ***/
 
-//draw a group
 void Group::draw() 
 {   
-    glColor3f(colorR,colorG,colorB);
-    
-    std::vector<Agent>::iterator it;
-    for (it = agents.begin() ; it != agents.end(); ++it) {
-        (*it).draw();
-    }
-
+	glColor3f(colorR, colorG, colorB);
+	
+	std::vector<Agent>::iterator it;
+	for (it = agents.begin(); it != agents.end(); ++it)
+	{
+		(*it).draw();
+	}
 }
 

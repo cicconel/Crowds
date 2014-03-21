@@ -20,9 +20,9 @@ public:
 	
 	
 	/*** Methods ***/
-	// Update the position of all agents
+	// Updates the position of all agents
 	void update();
-	// Display the map and the agents
+	// Displays the map and the agents
 	void display();
     // Initializes the display window (glut)
     void init_window();
