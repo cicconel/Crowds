@@ -27,7 +27,7 @@ SOURCES = src/main.cpp \
           src/scene.cpp \
           src/scene_update.cpp \
           src/scene_display.cpp \
-          src/map.cpp
+          src/map.cpp 
 
 
 # Additionnal command to distclean target

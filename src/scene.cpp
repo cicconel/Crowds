@@ -1,6 +1,5 @@
 #include "scene.hpp"
 
-
 /*** Constructors ***/
 
 Scene::Scene()

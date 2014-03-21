@@ -23,6 +23,7 @@ public:
 	
 	
 	/*** Methods ***/
+    void draw();
 	
 };
 

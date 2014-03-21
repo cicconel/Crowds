@@ -3,13 +3,14 @@
 
 #include <vector>
 #include "vector.hpp"
+#include "agent.hpp"
 
 
 class Group
 {
 public:
 	/*** Attributes ***/
-	std::vector<unsigned int> agents;	// List of people in the group
+	std::vector< Agent > agents;	    // List of people in the group
 	Vector desiredPosition;				// Target position
 	Vector center;						// Center of mass
 	float b1;							// Strength of social interaction
@@ -25,6 +26,7 @@ public:
 	
 	
 	/*** Methods ***/
+    void draw();
 	
 };
 
