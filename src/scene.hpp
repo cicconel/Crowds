@@ -25,6 +25,8 @@ public:
 	void update();
 	// Display the map and the agents
 	void display();
+    // Initializes the display window (glut)
+    void init_window();
 };
 
 

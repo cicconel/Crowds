@@ -1,12 +1,20 @@
 #include "scene.hpp"
+#include <GL/glut.h> 
 
 int main(int argc, char* argv[])
 {
-	Scene scene;
-	while (true)
+    //Initalizing glut
+    glutInit(&argc, argv);   
+    
+    Scene scene;
+    scene.init_window();
+
+    while (true)
 	{
 		scene.update();
-		scene.display();
+        
+        //TODO : useful since glutDisplayFunc(display)?
+		//scene.display();
 	}
 	
 	return 0;
