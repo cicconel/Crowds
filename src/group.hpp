@@ -13,11 +13,11 @@ public:
 	std::vector<Agent *> agents;	   	// List of people in the group
 	Vector desiredPosition;				// Target position
 	Vector center;						// Center of mass
-	float b1;							// Strength of social interaction
-	float b2;							// Strength of attraction effect
-	float b3;							// Repulsion strength
-	float threshold;					// Threshold for attraction effect
-	float colorR, colorG, colorB;		// Color of the group
+	double b1;							// Strength of social interaction
+	double b2;							// Strength of attraction effect
+	double b3;							// Repulsion strength
+	double threshold;					// Threshold for attraction effect
+	double colorR, colorG, colorB;		// Color of the group
 	
 	
 	/*** Constructors ***/
@@ -26,11 +26,13 @@ public:
 	
 	
 	/*** Methods ***/
-	// Draw a group
-	void draw();
-	
 	// Compute the force of interaction with other group members for each agent
 	void groupForce();
+	// Update data of this class and of every agent of the group
+	void update(double dt);
+	
+	// Draw a group
+	void draw();
 };
 
 

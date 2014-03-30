@@ -4,10 +4,10 @@
 /*** Constructors ***/
 
 Map::Map()
-	: xMin(-10.0)
-	, xMax(10.0)
-	, yMin(-10.0)
-	, yMax(10.0)
+	: xMin(-1000.0)
+	, xMax(1000.0)
+	, yMin(-1000.0)
+	, yMax(1000.0)
 	, obstacles()
 {
 }
@@ -21,7 +21,7 @@ Map::~Map()
 
 void Map::zoomIn()
 {
-	float factor = 1.0/1.2;
+	double factor = 1.0/1.2;
 	xMin *= factor;
 	xMax *= factor;
 	yMin *= factor;
@@ -30,7 +30,7 @@ void Map::zoomIn()
 
 void Map::zoomOut()
 {
-	float factor = 1.2;
+	double factor = 1.2;
 	xMin *= factor;
 	xMax *= factor;
 	yMin *= factor;

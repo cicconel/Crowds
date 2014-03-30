@@ -9,12 +9,12 @@ class Vector
 {
 public:
 	/*** Attributes ***/
-	float x, y;	// Coordinates
+	double x, y;	// Coordinates
 
 
 	/*** Constructors ***/
-	Vector() : x(x), y(y) {}
-	Vector(float x, float y) : x(x), y(y) {}
+	Vector() : x(0.0), y(0.0) {}
+	Vector(double x, double y) : x(x), y(y) {}
 	~Vector() {}
 
 
@@ -39,23 +39,23 @@ public:
 		return *this;
 	}
 
-	inline Vector operator*(float s) const {
+	inline Vector operator*(double s) const {
 		return Vector(x * s, y * s);
 	}
 
-	inline Vector& operator*=(float s) {
+	inline Vector& operator*=(double s) {
 		x *= s;
 		y *= s;
 		return *this;
 	}
 
-	inline Vector operator/(float s) const {
-		float inv = 1.0 / s;
+	inline Vector operator/(double s) const {
+		double inv = 1.0 / s;
 		return Vector(x * inv, y * inv);
 	}
 
-	inline Vector& operator/=(float s) {
-		float inv = 1.0 / s;
+	inline Vector& operator/=(double s) {
+		double inv = 1.0 / s;
 		x *= inv;
 		y *= inv;
 		return *this;
@@ -66,7 +66,7 @@ public:
 	}
 
 	inline bool operator==(const Vector& rhs) const {
-		float epsilon = 0.001;
+		double epsilon = 0.001;
 		return (fabs(x - rhs.x) < epsilon && fabs(y - rhs.y) < epsilon);
 	}
 
@@ -77,7 +77,7 @@ public:
 
 
 // Multiplication with a scalar
-inline Vector operator*(float s, const Vector& rhs) {
+inline Vector operator*(double s, const Vector& rhs) {
 	return rhs * s;
 }
 
@@ -87,27 +87,27 @@ inline std::ostream& operator<<(std::ostream& os, const Vector& v) {
 }
 
 // Returns the dot product of two vectors
-inline float dot(const Vector& lhs, const Vector& rhs) {
+inline double dot(const Vector& lhs, const Vector& rhs) {
 	return lhs.x * rhs.x + lhs.y * rhs.y;
 }
 
 // Efficiency function: does not require square root operation
-inline float squared_length(const Vector& v) {
+inline double squared_length(const Vector& v) {
 	return v.x * v.x + v.y * v.y;
 }
 
 // Returns the length of a vector
-inline float length(const Vector& v) {
+inline double length(const Vector& v) {
 	return sqrt(squared_length(v));
 }
 
 // Calculate the positive distance between two vectors
-inline float distance(const Vector& lhs, const Vector& rhs) {
+inline double distance(const Vector& lhs, const Vector& rhs) {
 	return length(lhs - rhs);
 }
 
 // Efficiency function: does not require square root operation
-inline float squared_distance(const Vector& lhs, const Vector& rhs) {
+inline double squared_distance(const Vector& lhs, const Vector& rhs) {
 	return squared_length(lhs - rhs);
 }
 

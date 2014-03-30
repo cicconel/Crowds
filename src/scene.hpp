@@ -13,6 +13,7 @@ public:
 	std::vector<Agent *> agents;	// List of people in the group
 	std::vector<Group *> groups;	// All the groups in the scene
 	Map map;						// Environment of the scene
+	double timestep;				// Timestep for forces computation
 	
 	
 	/*** Constructors ***/

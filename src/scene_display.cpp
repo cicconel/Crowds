@@ -3,13 +3,13 @@
 #include <math.h>
 
 
-void disk_bis(float x, float y, float r)
+void disk_bis(double x, double y, double r)
 {
 	glBegin(GL_TRIANGLE_FAN);
 		glVertex2f(x, y);
 		for(int n = 0; n <= 20; ++n)
 		{
-			float const t = 2.0 * M_PI * (float)n / 20.0;
+			double const t = 2.0 * M_PI * (double)n / 20.0;
 			glVertex2f(x + sin(t)*r, y + cos(t)*r);
 		}
 	glEnd();
@@ -24,10 +24,10 @@ void Scene::display()
 
 	// Preliminary scaling : t
 	// frame [xmin,xmax]*[ymin,ymax]
-	float x_min = map.xMin;
-	float x_max = map.xMax;
-	float y_min = map.yMin;
-	float y_max = map.yMax;
+	double x_min = map.xMin;
+	double x_max = map.xMax;
+	double y_min = map.yMin;
+	double y_max = map.yMax;
 	
 	glLoadIdentity();
 	glTranslatef((x_max+x_min)/(x_min-x_max), (y_max+y_min)/(y_min-y_max), 0.0);
@@ -67,7 +67,7 @@ void display_callback()
 //Initializes the window for the display
 void Scene::init_window(){
 	 int height = 720;
-	 float ratio_f = (map.yMax - map.yMin)/(map.xMax - map.xMin);
+	 double ratio_f = (map.yMax - map.yMin)/(map.xMax - map.xMin);
 	 int ratio_i = int(ratio_f + 0.5);
 	 glutInitWindowSize(height*ratio_i,height);
 	 glutInitWindowPosition(0,0);

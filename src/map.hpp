@@ -7,8 +7,8 @@
 
 struct Obstacle
 {
-	bool loop;			// True if the shape is closed
-	Vector *corners;	// List of the obstacle's corners
+	bool loop;						// True if the shape is closed
+	std::vector<Vector> corners;	// List of the obstacle's corners
 };
 
 
@@ -16,7 +16,7 @@ class Map
 {
 public:
 	/*** Attributes ***/
-	float xMin, xMax, yMin, yMax;		// Size of the map ((yMax-yMin)/(xMax-xMin) is fixed)
+	double xMin, xMax, yMin, yMax;		// Size of the map ((yMax-yMin)/(xMax-xMin) is fixed)
 	std::vector<Obstacle> obstacles;	// Walls and obstacles present in the environment
 	
 	

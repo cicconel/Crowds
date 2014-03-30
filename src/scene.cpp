@@ -6,6 +6,7 @@ Scene::Scene()
 	: agents()
 	, groups()
 	, map()
+	, timestep(0.01)
 {
 }
 
