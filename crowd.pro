@@ -16,22 +16,23 @@ OBJECTS_DIR = build
 
 # Code Files
 HEADERS = src/agent.hpp \
-          src/group.hpp \
-          src/scene.hpp \
-          src/map.hpp \
-          src/vector.hpp
+		  src/group.hpp \
+		  src/scene.hpp \
+		  src/map.hpp \
+		  src/vector.hpp
 
 SOURCES = src/main.cpp \
-          src/agent.cpp \
-          src/group.cpp \
-          src/scene.cpp \
-          src/scene_update.cpp \
-          src/scene_display.cpp \
-          src/map.cpp 
+		  src/agent.cpp \
+		  src/group.cpp \
+		  src/scene.cpp \
+		  src/scene_update.cpp \
+		  src/scene_display.cpp \
+		  src/map.cpp 
 
 
 # Additionnal command to distclean target
-QMAKE_DISTCLEAN += rm -f *~; \
-    rm -r build/;            \
-    rm -f /src/*~;           \
-    rm -f /scenes/*~;        \
+QMAKE_DISTCLEAN += *~
+QMAKE_DISTCLEAN += src/*~
+QMAKE_DISTCLEAN += scenes/*~
+QMAKE_DISTCLEAN += -r build/
+

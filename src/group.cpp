@@ -4,7 +4,7 @@
 /*** Constructors ***/
 
 Group::Group()
-	: agents(NULL)
+	: agents()
 	, desiredPosition(1.0, 0.0)
 	, center()
 	, b1(4.0)
@@ -28,10 +28,15 @@ void Group::draw()
 {   
 	glColor3f(colorR, colorG, colorB);
 	
-	std::vector<Agent>::iterator it;
+	std::vector<Agent *>::iterator it;
 	for (it = agents.begin(); it != agents.end(); ++it)
 	{
-		(*it).draw();
+		(*it)->draw();
 	}
+}
+
+
+void Group::groupForce()
+{
 }
 

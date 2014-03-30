@@ -44,10 +44,10 @@ void Scene::display()
 
 	
 	//Groups (Agents) rendering
-	std::vector<Group>::iterator it;
+	std::vector<Group *>::iterator it;
 	for (it = groups.begin(); it != groups.end(); ++it)
 	{
-		(*it).draw();
+		(*it)->draw();
 	}
 
 	glFlush();

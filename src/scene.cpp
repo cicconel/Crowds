@@ -3,13 +3,16 @@
 /*** Constructors ***/
 
 Scene::Scene()
-	: groups(NULL)
+	: agents()
+	, groups()
 	, map()
 {
 }
 
 Scene::~Scene()
 {
+	agents.clear();
+	groups.clear();
 }
 
 

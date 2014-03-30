@@ -21,12 +21,6 @@ Agent::~Agent()
 
 /*** Methods ***/
 
-void Agent::draw()
-{
-	//disk(position.x, position.y, bodyDiameter);
-}
-
-
 //Draw a disk
 //TODO : change position (drawing_tools file?)
 #define DISK_PRECISION 20
@@ -40,5 +34,31 @@ void disk(float x, float y, float r)
 			glVertex2f(x + sin(t)*r, y + cos(t)*r);
 		}
 	glEnd();
+}
+
+
+void Agent::draw()
+{
+	//disk(position.x, position.y, bodyDiameter);
+}
+
+
+void Agent::drivingForce()
+{
+}
+
+
+void Agent::obstaclesForce(const std::vector<Obstacle> &obstacles)
+{
+}
+
+
+void Agent::interactionForce(const std::vector<Agent *> &agents, std::vector<Agent *>::iterator itMe)
+{
+}
+
+
+void Agent::update(double dt)
+{
 }
 

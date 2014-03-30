@@ -10,7 +10,7 @@ class Group
 {
 public:
 	/*** Attributes ***/
-	std::vector< Agent > agents;	    // List of people in the group
+	std::vector<Agent *> agents;	   	// List of people in the group
 	Vector desiredPosition;				// Target position
 	Vector center;						// Center of mass
 	float b1;							// Strength of social interaction
@@ -29,6 +29,8 @@ public:
 	// Draw a group
 	void draw();
 	
+	// Compute the force of interaction with other group members for each agent
+	void groupForce();
 };
 
 

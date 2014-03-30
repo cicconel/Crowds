@@ -8,7 +8,7 @@ Map::Map()
 	, xMax(10.0)
 	, yMin(-10.0)
 	, yMax(10.0)
-	, obstacles(NULL)
+	, obstacles()
 {
 }
 

@@ -10,8 +10,9 @@ class Scene
 {
 public:
 	/*** Attributes ***/
-	std::vector<Group> groups;	// All the groups in the scene
-	Map map;					// Environment of the scene
+	std::vector<Agent *> agents;	// List of people in the group
+	std::vector<Group *> groups;	// All the groups in the scene
+	Map map;						// Environment of the scene
 	
 	
 	/*** Constructors ***/
@@ -24,8 +25,8 @@ public:
 	void update();
 	// Displays the map and the agents
 	void display();
-    // Initializes the display window (glut)
-    void init_window();
+	// Initializes the display window (glut)
+	void init_window();
 };
 
 
