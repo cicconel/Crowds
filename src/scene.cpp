@@ -20,7 +20,7 @@ Scene::~Scene()
 
 /*** Methods ***/
 
-// In scene_update and scene_display
+// See scene_update and scene_display
 
 bool Scene::initialize(const char* filename)
 {
