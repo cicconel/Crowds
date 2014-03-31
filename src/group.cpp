@@ -6,7 +6,7 @@
 
 Group::Group()
 	: agents()
-	, desiredPosition(1.0, 0.0)
+	, desiredPosition(0.0, 0.0)
 	, center()
 	, b1(4.0)
 	, b2(1.0)

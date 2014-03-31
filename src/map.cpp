@@ -5,10 +5,10 @@
 /*** Constructors ***/
 
 Map::Map()
-	: xMin(-1000.0)
-	, xMax(1000.0)
-	, yMin(-1000.0)
-	, yMax(1000.0)
+	: xMin(-30.0)
+	, xMax(30.0)
+	, yMin(-30.0)
+	, yMax(30.0)
 	, obstacles()
 {
 }
@@ -70,9 +70,6 @@ void Map::draw()
                 glVertex2f(it_corn->x,it_corn->y); 
             }
             glEnd();
-        
         }
-
     }
-
 }
