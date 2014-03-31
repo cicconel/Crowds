@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 		scene.update();
 		
 		//TODO : useful since glutDisplayFunc(display)?
-		scene.display();
+		//scene.display();
 	}
 	
 	return 0;

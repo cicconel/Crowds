@@ -97,9 +97,9 @@ bool Scene::initialize(const char* filename)
 		groupXml->QueryDoubleAttribute("b3", &new_Group->b3);
 		groupXml->QueryDoubleAttribute("b3", &new_Group->b3);
 		groupXml->QueryDoubleAttribute("threshold", &new_Group->threshold);
-		groupXml->QueryDoubleAttribute("colorR", &new_Group->colorR);
-		groupXml->QueryDoubleAttribute("colorR", &new_Group->colorG);
-		groupXml->QueryDoubleAttribute("colorR", &new_Group->colorB);
+		groupXml->QueryDoubleAttribute("ColorR", &new_Group->colorR);
+		groupXml->QueryDoubleAttribute("ColorG", &new_Group->colorG);
+		groupXml->QueryDoubleAttribute("ColorB", &new_Group->colorB);
 		Vector center(0.0, 0.0);
 		
 		// Set list of agents
