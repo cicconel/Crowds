@@ -1,0 +1,42 @@
+<scene timestep = "0.01">
+
+	<map xMin = "-70.0" xMax = "70.0" yMin = "-70.0" yMax = "70.0">
+		<obstacle loop="1">
+			<corner x = "-69.0" y = "-69.0"/>
+			<corner x = "69.0" y = "-69.0"/>
+			<corner x = "69.0" y = "69.0"/>
+			<corner x = "-69.0" y = "69.0"/>
+		</obstacle>
+		<obstacle loop="0">
+			<corner x = "-10.0" y = "-10.0"/>
+			<corner x = "10.0" y = "-10.0"/>
+			<corner x = "10.0" y = "10.0"/>
+			<corner x = "-10.0" y = "10.0"/>
+		</obstacle>
+	</map>
+
+	<groups>
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.8" ColorG = "0.2" ColorB = "0.0">
+			<target x = "0.0" y = "69.0"/>
+			<agent speed = "1.2" bodyRay = "0.3" safetyDistance = "0.3" angleVision = "1.7">
+				<position x = "0.0" y = "-30.0"/>
+			</agent>
+			<agent speed = "1.11" bodyRay = "0.4" safetyDistance = "0.29" angleVision = "1.6">
+				<position x = "30.0" y = "-30.0"/>
+			</agent>
+			<agent speed = "1.28" bodyRay = "0.42" safetyDistance = "0.15" angleVision = "1.5">
+				<position x = "-30.0" y = "-30.0"/>
+			</agent>
+		</group>
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.5" ColorG = "0.1" ColorB = "0.8">
+	   	<target x = "0.0" y = "69.0"/>
+			<agent speed = "1.19" bodyRay = "0.27" safetyDistance = "0.21" angleVision = "1.7">
+				<position x = "0.0" y = "30.0"/>
+			</agent>
+			<agent speed = "1.17" bodyRay = "0.32" safetyDistance = "0.35" angleVision = "1.6">
+				<position x = "30.0" y = "30.0"/>
+			</agent>
+		</group>
+	</groups>
+
+</scene>
