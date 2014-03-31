@@ -97,12 +97,11 @@ void Group::update(double dt)
 
 
 void Group::draw() 
-{   
-	glColor3f(colorR, colorG, colorB);
-	
+{  
 	std::vector<Agent *>::iterator it;
 	for (it = agents.begin(); it != agents.end(); ++it)
 	{
+	    glColor3f(colorR, colorG, colorB);
 		(*it)->draw();
 	}
 }
