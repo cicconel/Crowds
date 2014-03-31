@@ -102,7 +102,6 @@ Vector Agent::interactionForce(const Agent &agent)
 
 
 //Draw a disk
-//TODO : change position (drawing_tools file?)
 #define DISK_PRECISION 20
 void disk(double x, double y, double r)
 {
@@ -117,7 +116,9 @@ void disk(double x, double y, double r)
 }
 
 
+//Draw an agent
 void Agent::draw()
 {
 	disk(position.x, position.y, bodyRay);
+    //TODO : gazing direction
 }
