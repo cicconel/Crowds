@@ -19,7 +19,8 @@ HEADERS = src/agent.hpp \
 		  src/group.hpp \
 		  src/scene.hpp \
 		  src/map.hpp \
-		  src/vector.hpp
+		  src/vector.hpp \
+		  tinyxml/tinyxml.h
 
 SOURCES = src/main.cpp \
 		  src/agent.cpp \
@@ -27,12 +28,16 @@ SOURCES = src/main.cpp \
 		  src/scene.cpp \
 		  src/scene_update.cpp \
 		  src/scene_display.cpp \
-		  src/map.cpp 
+		  src/map.cpp \
+		  tinyxml/tinyxml.cpp \
+		  tinyxml/tinyxmlerror.cpp \
+		  tinyxml/tinyxmlparser.cpp
 
 
 # Additionnal command to distclean target
 QMAKE_DISTCLEAN += *~
 QMAKE_DISTCLEAN += src/*~
 QMAKE_DISTCLEAN += scenes/*~
+QMAKE_DISTCLEAN += tinyxml/*~
 QMAKE_DISTCLEAN += -r build/
 

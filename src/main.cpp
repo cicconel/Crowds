@@ -3,18 +3,21 @@
 
 int main(int argc, char* argv[])
 {
-    //Initalizing glut
-    glutInit(&argc, argv);   
-    
-    Scene scene;
-    scene.init_window();
+	// Initialize glut
+	glutInit(&argc, argv);   
+	
+	// Initialize scene
+	Scene scene;
+	if (argc > 1 && !scene.initialize(argv[1]))
+		return 1;
+	scene.init_window();
 
-    while (true)
+	while (true)
 	{
 		scene.update();
-        
-        //TODO : useful since glutDisplayFunc(display)?
-		//scene.display();
+		
+		//TODO : useful since glutDisplayFunc(display)?
+		scene.display();
 	}
 	
 	return 0;

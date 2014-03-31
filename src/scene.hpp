@@ -4,6 +4,8 @@
 #include "map.hpp"
 #include "agent.hpp"
 #include "group.hpp"
+#include <iostream>
+#include <cstring>
 
 
 class Scene
@@ -22,6 +24,8 @@ public:
 	
 	
 	/*** Methods ***/
+	// Initializes the scene by parsing a xml document
+	bool initialize(const char* filename);
 	// Updates the position of all agents
 	void update();
 	// Displays the map and the agents

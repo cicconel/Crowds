@@ -6,13 +6,14 @@
 /*** Constructors ***/
 
 Agent::Agent()
-	: position()
-	, velocity()
+	: position(0.0, 0.0)
+	, velocity(0.0, 0.0)
 	, desiredVelocity(1.0, 0.0)
 	, gazing(1.0, 0.0)
 	, bodyRay(0.5)
 	, safetyDistance(0.2)
-	, angleVision(90.0)
+	, angleVision(1.7)
+	, forces(0.0, 0.0)
 {
 }
 
@@ -118,5 +119,5 @@ void disk(double x, double y, double r)
 
 void Agent::draw()
 {
-	//disk(position.x, position.y, bodyRay);
+	disk(position.x, position.y, bodyRay);
 }
