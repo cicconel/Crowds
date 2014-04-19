@@ -14,6 +14,7 @@ int main(int argc, char* argv[])
 
 	while (true)
 	{
+//std::cout<<scene.agents[0]->position.x<<" "<<scene.agents[0]->position.y<<std::endl;
 		scene.update();
 		
 		//TODO : useful since glutDisplayFunc(display)?

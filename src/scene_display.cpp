@@ -55,6 +55,6 @@ void Scene::init_window(){
 	 glutCreateWindow("Crowd Simulator V0");
 	 ::ptr_global_instance = this;
 	 ::glutDisplayFunc(::display_callback);
-	 glutMainLoop(); 
+	// glutMainLoop(); 
 }
 

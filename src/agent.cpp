@@ -38,7 +38,7 @@ void Agent::obstaclesForce(const std::vector<Obstacle> &obstacles)
 	{
 		// Compute the distance to the wall and the repulsion direction
 		double dist = std::numeric_limits<double>::max();
-		Vector direction;
+		Vector direction, direction2;
 		std::vector<Vector>::const_iterator itCorner1, itCorner2;
 		for (itCorner1 = it->corners.begin(); itCorner1 != it->corners.end(); itCorner1++)
 		{
@@ -60,18 +60,25 @@ void Agent::obstaclesForce(const std::vector<Obstacle> &obstacles)
 			else if (r > 1.0)	// Case where projection falls beyond the second point
 				projection = (*itCorner2);
 			else				// Case where projection falls on the segment
-				projection = (*itCorner2) + r * ((*itCorner2) - (*itCorner1));
+				projection = (*itCorner1) + r * ((*itCorner2) - (*itCorner1));
 			
 			double distCour = length(position - projection);
 			if (distCour < dist)
 			{
 				dist = distCour;
 				direction = normalize(position - projection);
+				direction2 = normalize(position - ((*itCorner2) - (*itCorner1)) / 2.0);
+				if (dot(direction, velocity) > 0.0)
+				{
+					direction = Vector(0.0, 0.0);
+					direction2 = Vector(0.0, 0.0);
+				}
 			}
 		}
 		
-		// Compute force
-		forces += 10.0 * exp(-dist/0.1) * direction;
+		// Compute force (New formula...)
+		forces += 0.005 * exp(3.0/dist) * direction;
+		forces += 0.005 * exp(3.0/dist) * direction2;
 	}
 }
 
@@ -79,7 +86,7 @@ void Agent::obstaclesForce(const std::vector<Obstacle> &obstacles)
 Vector Agent::interactionForce(const Agent &agent)
 {
 	// Constants
-	const double A = 4.5;
+	const double A = 7.0;
 	const double gamma = 0.35;
 	const double n1 = 2.0;
 	const double n2 = 3.0;
@@ -94,8 +101,7 @@ Vector Agent::interactionForce(const Agent &agent)
 	Vector T = Dij / Dij_norm;
 	double B = gamma * Dij_norm;
 	Vector N(-T.y, T.x);
-	double theta = fabs(acos(dot(T, eij)));
-	
+	double theta = fabs(acos(std::max(-1.0, std::min(1.0, dot(T, eij)))));
 	// Compute force
 	return -A * exp(-dist / B) * (exp(-(n2 * B * theta) * (n2 * B * theta)) * T + exp(-(n1 * B * theta) * (n1 * B * theta)) * N);
 }
