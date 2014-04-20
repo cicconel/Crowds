@@ -34,27 +34,72 @@ void Scene::display()
 	glFlush();
 }
 
-
 // Trick to handle the fact that display belongs to a class (scene).
 // http://stackoverflow.com/questions/5008266/callback-function-in-freeglut-from-object
 Scene * ptr_global_instance = NULL;
 extern "C"
 void display_callback()
 {
-	ptr_global_instance->display();
+    if (!ptr_global_instance->pause) {
+	    ptr_global_instance->update();
+    }
+    ptr_global_instance->display();
+    glutPostRedisplay();
 }
 
+void keyboard_basic(unsigned char key, int x, int y)  
+{
+      switch (key) 
+    {
+        //Play/Pause
+        case 'p' : 
+            ptr_global_instance->pause = !ptr_global_instance->pause;
+            break;
+    
+        //Zoom in
+        case 'i' : 
+            ptr_global_instance->map.zoomIn();
+            break;
+        
+        //Zoom out
+        case 'o' :
+            ptr_global_instance->map.zoomOut();
+            break;
+
+        //Translate left
+        case 'q' :
+            ptr_global_instance->map.move(Vector(-1,0));
+            break;
+
+       //Translate right
+       case 'd' :
+            ptr_global_instance->map.move(Vector(1,0));
+            break;
+
+      //Translate up
+      case 'z' : 
+            ptr_global_instance->map.move(Vector(0,1));
+            break;
+
+     //Translate down 
+     case 's' : 
+            ptr_global_instance->map.move(Vector(0,-1));
+            break;
+    }
+}
 
 //Initializes the window for the display
-void Scene::init_window(){
+void Scene::init_window()
+{
 	 int height = 720;
 	 double ratio_f = (map.yMax - map.yMin)/(map.xMax - map.xMin);
 	 int ratio_i = int(ratio_f + 0.5);
 	 glutInitWindowSize(height*ratio_i,height);
 	 glutInitWindowPosition(0,0);
 	 glutCreateWindow("Crowd Simulator V0");
-	 ::ptr_global_instance = this;
+     ::ptr_global_instance = this;
+     ::glutKeyboardUpFunc(::keyboard_basic); 
 	 ::glutDisplayFunc(::display_callback);
-	// glutMainLoop(); 
 }
+
 

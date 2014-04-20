@@ -38,7 +38,7 @@ void Map::zoomOut()
 	yMax *= factor;
 }
 
-void Map::move(Vector &direction)
+void Map::move(Vector direction)
 {
 	Vector dir_factor = normalize(direction) * (yMax-yMin) * 0.01;
 	xMin += dir_factor.x;

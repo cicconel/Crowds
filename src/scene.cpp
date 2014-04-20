@@ -8,6 +8,7 @@ Scene::Scene()
 	, groups()
 	, map()
 	, timestep(0.01)
+    , pause(true)
 {
 }
 
