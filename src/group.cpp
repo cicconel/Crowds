@@ -41,6 +41,8 @@ void Group::groupForce()
 			double alpha = angleCenter - (*it)->angleVision;
 			(*it)->forces -= b1 * alpha * (*it)->velocity;
 			(*it)->gazing = Vector(-posCenter_norm.y, posCenter_norm.x);
+			if (dot((*it)->gazing, velocity_norm) < 0.0)
+				(*it)->gazing = -(*it)->gazing;
 		}
 		else
 		{

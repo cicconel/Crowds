@@ -10,9 +10,8 @@
 	</map>
 
 	<groups>
-		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.8" ColorG = "0.2" ColorB = "0.0">
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.2" ColorB = "0.0">
 			<target x = "0.0" y = "60.0"/>
-			
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-30.0" y = "-30.0"/>
 			</agent>
@@ -25,6 +24,10 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-15.0" y = "-30.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.2" ColorB = "0.8">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-10.0" y = "-30.0"/>
 			</agent>
@@ -34,9 +37,17 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "0.0" y = "-30.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.8" ColorB = "0.2">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "5.0" y = "-30.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.5" ColorB = "0.1">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "10.0" y = "-30.0"/>
 			</agent>
@@ -46,16 +57,23 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "20.0" y = "-30.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.6" ColorB = "0.4">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "25.0" y = "-30.0"/>
 			</agent>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "30.0" y = "-30.0"/>
 			</agent>
-
 		   <agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-30.0" y = "-35.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.5" ColorB = "0.1">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-25.0" y = "-35.0"/>
 			</agent>
@@ -65,12 +83,20 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-15.0" y = "-35.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.0" ColorB = "0.4">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-10.0" y = "-35.0"/>
 			</agent>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-5.0" y = "-35.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.5" ColorB = "0.5">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "0.0" y = "-35.0"/>
 			</agent>
@@ -80,12 +106,24 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "10.0" y = "-35.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.8" ColorB = "0.8">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "15.0" y = "-35.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.2" ColorB = "0.2">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "20.0" y = "-35.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.4" ColorB = "0.1">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "25.0" y = "-35.0"/>
 			</agent>
@@ -98,6 +136,10 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-25.0" y = "-40.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.7" ColorB = "0.1">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-20.0" y = "-40.0"/>
 			</agent>
@@ -107,12 +149,20 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-10.0" y = "-40.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.5" ColorB = "0.8">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-5.0" y = "-40.0"/>
 			</agent>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "0.0" y = "-40.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.8" ColorB = "0.5">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "5.0" y = "-40.0"/>
 			</agent>
@@ -125,24 +175,30 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "20.0" y = "-40.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "1.0" ColorG = "0.1" ColorB = "0.6">
+			<target x = "0.0" y = "60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "25.0" y = "-40.0"/>
 			</agent>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "30.0" y = "-40.0"/>
 			</agent>
-
 		</group>
 
-		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.0" ColorG = "0.2" ColorB = "0.8">
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.2" ColorG = "0.6" ColorB = "1.0">
 			<target x = "0.0" y = "-60.0"/>
-			
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-30.0" y = "30.0"/>
 			</agent>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-25.0" y = "30.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.7" ColorG = "0.2" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-20.0" y = "30.0"/>
 			</agent>
@@ -152,6 +208,10 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-10.0" y = "30.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.1" ColorG = "0.2" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-5.0" y = "30.0"/>
 			</agent>
@@ -167,9 +227,17 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "15.0" y = "30.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.5" ColorG = "0.7" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "20.0" y = "30.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.5" ColorG = "0.1" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "25.0" y = "30.0"/>
 			</agent>
@@ -182,6 +250,10 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-25.0" y = "35.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.7" ColorG = "0.1" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-20.0" y = "35.0"/>
 			</agent>
@@ -191,6 +263,10 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-10.0" y = "35.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.5" ColorG = "0.4" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-5.0" y = "35.0"/>
 			</agent>
@@ -203,12 +279,20 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "10.0" y = "35.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.8" ColorG = "0.8" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "15.0" y = "35.0"/>
 			</agent>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "20.0" y = "35.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.8" ColorG = "0.4" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "25.0" y = "35.0"/>
 			</agent>
@@ -218,9 +302,17 @@
 		   <agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-30.0" y = "40.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.4" ColorG = "0.8" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-25.0" y = "40.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.2" ColorG = "0.0" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-20.0" y = "40.0"/>
 			</agent>
@@ -230,6 +322,10 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-10.0" y = "40.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.0" ColorG = "0.0" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "-5.0" y = "40.0"/>
 			</agent>
@@ -245,6 +341,10 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "15.0" y = "40.0"/>
 			</agent>
+		</group>
+
+		<group b1 = "4.0" b2 = "1.0" b3 = "1.0" threshold = "0.2" ColorR = "0.0" ColorG = "0.2" ColorB = "1.0">
+			<target x = "0.0" y = "-60.0"/>
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "20.0" y = "40.0"/>
 			</agent>
@@ -254,7 +354,6 @@
 			<agent speed = "1" bodyRay = "0.4" safetyDistance = "1" angleVision = "1.5">
 				<position x = "30.0" y = "40.0"/>
 			</agent>
-
 		</group>
 		
 	</groups>
