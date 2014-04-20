@@ -49,27 +49,27 @@ void Map::move(Vector direction)
 
 void Map::draw()
 {
-    
+	
 	std::vector<Obstacle>::iterator it_obs;
 	std::vector<Vector>::iterator it_corn;
-    glColor3f(1.0,1.0,1.0); //White for all obstacles
-    
-    for (it_obs = obstacles.begin() ; it_obs != obstacles.end() ; it_obs++) {
-    
-        if (it_obs->loop) {
-            //Closed polygon
-            glBegin(GL_LINE_LOOP);
-            for (it_corn = it_obs->corners.begin() ; it_corn != it_obs->corners.end() ; it_corn++) {
-                glVertex2f(it_corn->x,it_corn->y); 
-            }
-            glEnd();
-        } else {
-            glBegin(GL_LINE_STRIP);
-            //Open polygon
-            for (it_corn = it_obs->corners.begin() ; it_corn != it_obs->corners.end() ; it_corn++) {
-                glVertex2f(it_corn->x,it_corn->y); 
-            }
-            glEnd();
-        }
-    }
+	glColor3f(1.0,1.0,1.0); //White for all obstacles
+	
+	for (it_obs = obstacles.begin() ; it_obs != obstacles.end() ; it_obs++) {
+	
+		if (it_obs->loop) {
+			//Closed polygon
+			glBegin(GL_LINE_LOOP);
+			for (it_corn = it_obs->corners.begin() ; it_corn != it_obs->corners.end() ; it_corn++) {
+				glVertex2f(it_corn->x,it_corn->y); 
+			}
+			glEnd();
+		} else {
+			glBegin(GL_LINE_STRIP);
+			//Open polygon
+			for (it_corn = it_obs->corners.begin() ; it_corn != it_obs->corners.end() ; it_corn++) {
+				glVertex2f(it_corn->x,it_corn->y); 
+			}
+			glEnd();
+		}
+	}
 }

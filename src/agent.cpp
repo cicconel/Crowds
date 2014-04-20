@@ -125,14 +125,14 @@ void disk(double x, double y, double r)
 //Draw an agent
 void Agent::draw()
 {
-    //Body
+	//Body
 	disk(position.x, position.y, bodyRay);
-    //Gazing Direction
-    glColor3f(0.0,0.0,0.0);
-    Vector normalized_gazing = normalize(gazing);
-    glBegin(GL_LINES);
-    glVertex2f(position.x,position.y);
-    glVertex2f(position.x+bodyRay*normalized_gazing.x, position.y+bodyRay*normalized_gazing.y);
-    glEnd();
+	//Gazing Direction
+	glColor3f(0.0,0.0,0.0);
+	Vector normalized_gazing = normalize(gazing);
+	glBegin(GL_LINES);
+	glVertex2f(position.x,position.y);
+	glVertex2f(position.x+bodyRay*normalized_gazing.x, position.y+bodyRay*normalized_gazing.y);
+	glEnd();
 
 }

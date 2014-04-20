@@ -101,7 +101,7 @@ void Group::draw()
 	std::vector<Agent *>::iterator it;
 	for (it = agents.begin(); it != agents.end(); ++it)
 	{
-	    glColor3f(colorR, colorG, colorB);
+		glColor3f(colorR, colorG, colorB);
 		(*it)->draw();
 	}
 }

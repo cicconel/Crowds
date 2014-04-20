@@ -32,8 +32,8 @@ public:
 	void zoomOut();
 	// Translate the camera in the direction "direction"
 	void move(Vector direction);
-    // Draws the map
-    void draw();
+	// Draws the map
+	void draw();
 };
 
 

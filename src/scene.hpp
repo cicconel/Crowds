@@ -16,7 +16,7 @@ public:
 	std::vector<Group *> groups;	// All the groups in the scene
 	Map map;						// Environment of the scene
 	double timestep;				// Timestep for forces computation
-    bool pause;                     // True if simulation is paused, false otherwise
+	bool pause;						// True if simulation is paused, false otherwise
 
 	
 	/*** Constructors ***/
@@ -33,8 +33,8 @@ public:
 	void display();
 	// Initializes the display window (glut)
 	void init_window();
-    // Manage keyboard entries (UI)
-    void toggle_keyboard(unsigned char key); 
+	// Manage keyboard entries (UI)
+	void toggle_keyboard(unsigned char key); 
 };
 
 
