@@ -64,7 +64,7 @@ void display_callback()
 	    ptr_global_instance->update();
     }
     //TODO : set screenshot rate...
-    if (ptr_global_instance->record && ptr_global_instance->step%10==0) {
+    if (ptr_global_instance->record && ptr_global_instance->step%2==0) {
 	    take_screenshot();
     }
     glutPostRedisplay();
