@@ -38,14 +38,41 @@ void Scene::display()
 // http://stackoverflow.com/questions/5008266/callback-function-in-freeglut-from-object
 Scene * ptr_global_instance = NULL;
 extern "C"
+
+void take_screenshot()
+{
+    static const size_t MAX_LEN = 256;
+    char filename[MAX_LEN];
+    int width, height;
+    
+    height = 720;
+	double ratio_f = (ptr_global_instance->map.yMax - ptr_global_instance->map.yMin)
+                         /(ptr_global_instance->map.xMax -ptr_global_instance->map.xMin);
+	int ratio_i = int(ratio_f + 0.5);
+    width = height*ratio_i;
+    
+    imageio_gen_name( filename, MAX_LEN );
+    if ( !imageio_save_screenshot( filename, width, height ) ) {
+        std::cout << "Recording failure : " << filename << std::endl;
+    }
+}
+
 void display_callback()
 {
-	if (!ptr_global_instance->pause) {
-		ptr_global_instance->update();
-	}
 	ptr_global_instance->display();
-	glutPostRedisplay();
+	if (!ptr_global_instance->pause) {
+	    ptr_global_instance->update();
+    }
+    //TODO : set screenshot rate...
+    if (ptr_global_instance->record && ptr_global_instance->step%10==0) {
+	    take_screenshot();
+    }
+    glutPostRedisplay();
+    ptr_global_instance->step++;
 }
+
+
+
 
 void keyboard_basic(unsigned char key, int x, int y)  
 {
@@ -85,12 +112,17 @@ void keyboard_basic(unsigned char key, int x, int y)
 		case 's' : 
 			ptr_global_instance->map.move(Vector(0,-1));
 			break;
-	}
+	
+        //Record
+        case 'r' : 
+            ptr_global_instance->record = !ptr_global_instance->record;
+    }
 }
 
 //Initializes the window for the display
 void Scene::init_window()
 {
+     //int timestep_shot = 100;
 	 int height = 720;
 	 double ratio_f = (map.yMax - map.yMin)/(map.xMax - map.xMin);
 	 int ratio_i = int(ratio_f + 0.5);
