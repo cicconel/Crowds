@@ -1,0 +1,18 @@
+
+//--------------------------------------//
+// Details of the rendered crowd scenes //
+//--------------------------------------//
+
+--> test_1.scene : simple group (3 people), walking side by side. Default parameters.. We can make out the horizontal line shape.
+--> test_2.scene : big group (13 people), walking side by side. Default parameters.
+
+
+
+
+
+--> test_b1.scene : comparison of the influence of the beta1 parameters (i.e associated to the visibility component of
+the force related to group). For the blue group, this component is equal to 0.0 (no "communication rules"), for the
+other group in red, it is set to zero... We can notice that the blue group reaches the target first but with no real
+"plausible" group walking pattern. This illustrate the trade-off between walking fast and have social interactions.
+
+--> test_obstacle_{3,4,5} : examples of bottlenecks. Some failures here.
