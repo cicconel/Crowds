@@ -77,8 +77,8 @@ void Agent::obstaclesForce(const std::vector<Obstacle> &obstacles)
 		}
 		
 		// Compute force (New formula...)
-		forces += 0.005 * exp(3.0/dist) * direction;
-		forces += 0.005 * exp(3.0/dist) * direction2;
+		forces += 0.005 * exp(10.0/dist) * direction;
+		forces += 0.005 * exp(10.0/dist) * direction2;
 	}
 }
 
