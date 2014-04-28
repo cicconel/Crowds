@@ -4,6 +4,7 @@
 #include "map.hpp"
 #include "agent.hpp"
 #include "group.hpp"
+#include "imageio.hpp"
 #include <iostream>
 #include <cstring>
 #include <QKeyEvent>
@@ -16,7 +17,10 @@ public:
 	std::vector<Group *> groups;	// All the groups in the scene
 	Map map;						// Environment of the scene
 	double timestep;				// Timestep for forces computation
-	bool pause;						// True if simulation is paused, false otherwise
+
+    unsigned int step;              // step in the running time
+    bool pause;						// True if simulation is paused, false otherwise
+	bool record;				    // True if simulation is recorded, false otherwise
 
 	
 	/*** Constructors ***/
@@ -33,8 +37,6 @@ public:
 	void display();
 	// Initializes the display window (glut)
 	void init_window();
-	// Manage keyboard entries (UI)
-	void toggle_keyboard(unsigned char key); 
 };
 
 
