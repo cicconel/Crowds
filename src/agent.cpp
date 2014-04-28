@@ -38,7 +38,7 @@ void Agent::obstaclesForce(const std::vector<Obstacle> &obstacles)
 	{
 		// Compute the distance to the wall and the repulsion direction
 		double dist = std::numeric_limits<double>::max();
-		Vector direction, direction2;
+		Vector direction;
 		std::vector<Vector>::const_iterator itCorner1, itCorner2;
 		for (itCorner1 = it->corners.begin(); itCorner1 != it->corners.end(); itCorner1++)
 		{
@@ -67,18 +67,13 @@ void Agent::obstaclesForce(const std::vector<Obstacle> &obstacles)
 			{
 				dist = distCour;
 				direction = normalize(position - projection);
-				direction2 = normalize(position - ((*itCorner2) - (*itCorner1)) / 2.0);
 				if (dot(direction, velocity) > 0.0)
-				{
 					direction = Vector(0.0, 0.0);
-					direction2 = Vector(0.0, 0.0);
-				}
 			}
 		}
 		
 		// Compute force (New formula...)
-		forces += 0.005 * exp(10.0/dist) * direction;
-		forces += 0.005 * exp(10.0/dist) * direction2;
+		forces += 0.005 * exp(5.0/dist) * direction;
 	}
 }
 
