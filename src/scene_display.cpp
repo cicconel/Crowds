@@ -116,6 +116,10 @@ void keyboard_basic(unsigned char key, int x, int y)
         //Record
         case 'r' : 
             ptr_global_instance->record = !ptr_global_instance->record;
+    
+        //Screenshot
+        case 't' :
+            take_screenshot();
     }
 }
 
