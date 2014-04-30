@@ -41,17 +41,27 @@ extern "C"
 
 void take_screenshot()
 {
+    //Shot rates 1/10?
+    if (ptr_global_instance->step%10 != 0) { return; }
+    
     static const size_t MAX_LEN = 256;
     char filename[MAX_LEN];
     int width, height;
     
-    height = 720;
+    static const char* SS_NAME = "screenshots/shot-";
+    static char ID_NAME[10];
+    sprintf (ID_NAME, "%08d", ptr_global_instance->step);
+    static const char* SS_SUFFIX = ".png";
+    strcpy( filename, SS_NAME );
+    strcat( filename, ID_NAME );
+    strcat( filename, SS_SUFFIX );
+
+    height = 718;
 	double ratio_f = (ptr_global_instance->map.yMax - ptr_global_instance->map.yMin)
                          /(ptr_global_instance->map.xMax -ptr_global_instance->map.xMin);
 	int ratio_i = int(ratio_f + 0.5);
     width = height*ratio_i;
     
-    imageio_gen_name( filename, MAX_LEN );
     if ( !imageio_save_screenshot( filename, width, height ) ) {
         std::cout << "Recording failure : " << filename << std::endl;
     }
@@ -63,10 +73,7 @@ void display_callback()
 	if (!ptr_global_instance->pause) {
 	    ptr_global_instance->update();
     }
-    //TODO : set screenshot rate...
-    if (ptr_global_instance->record && ptr_global_instance->step%2==0) {
-	    take_screenshot();
-    }
+	take_screenshot();
     glutPostRedisplay();
     ptr_global_instance->step++;
 }
