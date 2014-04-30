@@ -3,16 +3,28 @@
 // Details of the rendered crowd scenes //
 //--------------------------------------//
 
+
+[*********************]
+[ (Very) simple tests ]
+[*********************]
 --> test_1.scene : simple group (3 people), walking side by side. Default parameters.. We can make out the horizontal line shape.
 --> test_2.scene : big group (13 people), walking side by side. Default parameters.
 
+
+[****************]
+[ Crossing tests ]
+[****************]
 --> test_crossing_1.scene : 2 large groups crossing, 1D crossing
 --> test_crossing_2.scene : 4 big groups crossing, 2D crossing
+--> test_crossing_1_individuals.scene : only individuals (no group behaviour) --> Similar layout to test crossing 1.
+--> test_crossing_2_individuals.scene : only individuals (no group behaviour) --> Similar layout to test crossing 2. 
 --> test_crossing_3.scene : many groups, limited size (1-4), 1D crossing
 --> test_crossing_4.scene : many groups, limited sizes (1-4), 2D crossing
---> test_crossing_5.scene : only individuals (no group behaviour) --> Similar layout to test crossing 1.
---> test_crossing_6.scene : only individuals (no group behaviour) --> Similar layout to test crossing 2. 
 
+
+[******************]
+[ Parameters tests ]
+[******************]
 --> test_b1.scene : comparison of the influence of the beta1 parameters (i.e associated to the visibility component of
 the force related to group). For the blue group, this component is equal to 0.0 (no "communication rules"), for the
 other group in red, it is set to zero... We can notice that the blue group reaches the target first but with no real
@@ -22,4 +34,17 @@ other group in red, it is set to zero... We can notice that the blue group reach
 actually stick together as well as the red group does. And the fact that b2 is related to the attractive term in the
 group force is coherent with such an observation. 
 
+
+[****************]
+[ Obstacle tests ]
+[****************]
+--> test_obstacle_1 : 
+--> test_obstacle_2 : 
 --> test_obstacle_{3,4,5} : examples of bottlenecks. Some failures here.
+
+--> test_obstacle_6 : massive obstacle test (1D), only individuals. 78 agents, 0 group, 7 obstacles.
+--> test_obstacle_7 : massive obstacle test (2D), only individuals. 156 agents, 0 group, 19 obstacles.
+--> test_obstacle_8 : massive obstable test (1D), with groups. 78 agents, 2 groups, 7 obstacles. 
+--> test_obstacle_9 : massive obstable test (2D), with groups. 156 agents, 4 groups, 19 obstacles.
+--> test_obstacle_10 : 
+--> test_obstacle_11 : 
