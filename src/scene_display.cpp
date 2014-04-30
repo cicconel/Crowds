@@ -73,7 +73,9 @@ void display_callback()
 	if (!ptr_global_instance->pause) {
 	    ptr_global_instance->update();
     }
-	take_screenshot();
+	if (ptr_global_instance->record) {
+        take_screenshot();
+    }
     glutPostRedisplay();
     ptr_global_instance->step++;
 }
